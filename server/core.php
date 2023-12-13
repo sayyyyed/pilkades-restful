@@ -1,0 +1,38 @@
+<?php
+date_default_timezone_set('Asia/Jakarta');
+ 
+// Buat RSA Key 1024 bit atau 2048 bit di Linux/FreeBSD 
+// $ openssl genrsa 1024
+// $ openssl genrsa 2048
+$key = 
+"MIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDK7MNvcgvE36pp
+DoX5JlEKC9UtVsHz5TINH0lYYxm3qa0RukGXE3BbsV/K7m3Euqz2p+OZhA84tREV
+xZXNnUJYzIN+rVmXXhakCIAefVX9tf3sRaU/zq/3YTAkrEQz/XGIXfCrEYHmmilq
+7PXRa4uuALMgfa7QLJpM2y1pzY1iBbWptqgRVsFpeKuW2henf2o6f6wrdMdu7ChB
+Kc+CF6szNRVWlRAHLwS0frqwC9fub8rYryF9Nmq/RgpcccBmVbXq+/W4M4pALOau
+Xo92jgaVgIAHSL6IC+EosdnWBHPPuwZoEE6gjrRLmyXCIO/yiFowgq2xb9IC8O+9
+AjwIbnwJAgMBAAECggEAAZlpFuVCs3wBx08ufh6vr9EVDoTrBWWOhezzsochakGj
+lAqwPqUQEyDsPNixM8Y228DJ+elBB3Th3BaRDixJnBKMjMCH/rnmmsdYXyUkutmm
+1ShdW4ng+CWjb/6NkQ1TyjvXTDnYmL0pS2bvrwVWdfoab0yeRpS7aJSnoHhWv2mB
+ge43hghD+Ps1E2S8HWt1CBEoXAq4KczBpBaKETjZNytj0LX9MurZfJwh+Rdi2xhe
+gzAFqpxQDCgSvmpi7zpG7wSXJ2pkPbs7xvhgKB9f/I6mjUgCI+1yIVdUw32jOqVS
+usuV+pZDJLQUfsHdBNraNScxW7I9ZPc2eaowXrWqwQKBgQDy9xdKpFgP1YZ37uC4
+XytIoDMTlrDlC8flBd1j9s8U14CCUxwWDhbPWw2vgC4B/caHmi/PxhJWgNQmw6oH
+zISMKpbd/SeILnqht9R6xPk0Bxs7uA0peznth8mLzF49t1M3mAj5EP2ESHvT9wFW
+hH+7vVwfk0Nh0HtNVw8ez4ALOQKBgQDVz8EXap8IMXi9pJk2kClIQD8AkUGtGJZK
+P2wQdsGOK9LQ60hytWpI8olKBc5/NjAGQHZ4T1BcYBa9cBKjO0rDgLFWLcQP4t7f
+gL+MJQz2RrUC6xU1bDBX2qtJ6bqr6wc4FAX1kW4haF7pSxHVC/XA5PNAG+UFSLXZ
+ebGsBJ9nUQKBgA9e1lhggTmvNmyL7id7zc8wY0rP86zpy+GPN2xFhuA4qeaUv2gd
+yA+iIQGDSGXT2iVl+bRZQXu7drBlHHKV26TKZPTyOPgCiLuGV6jUoTdLY8upXxvK
+seV2+6cebK/W0yrnMVogWwltVHgaXjlM9I+58QQGWvLrL4G7CjfWxLDxAoGAf5xm
+x54YWuCECtQRqdIzAW9u6tzHUROKp7fgvJbUgRFA2vaCoAwM6orvS+HZVG24DhMt
+YjMcaHXlPJ2GUixSPAs0TJY2HbEvikAikveOG/MpmBtM5jyzQcw+TXgVtQQqo9q3
+j9CD5aaQdzcZ5okj3UQItuuvLg8ukiUi2ONNbHECgYBuQZyrAoEWRtDb3eHrXDBl
+XC3ANHCZujlpAx732fIs1uJUQVtq02/EGZrg4UZ5v+MfpF2IaAhlxDCiVBwGe8VS
+Kzqt+3lEuKGexwdfwee0pDOThKriHI7oko//WoXM+HXPKEY7g08jHsoeyUXQkxud
+MJirpa/KahPG9BNoPZucJg==
+";
+$issued_at = time();
+$expiration_time = $issued_at+(60*60); // valid selama 1 jam
+$issuer = "RestApiAuthJWT";
+?>
