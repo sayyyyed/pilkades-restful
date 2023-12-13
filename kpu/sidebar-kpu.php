@@ -14,7 +14,7 @@
                             </path>
                         </svg>
                     </button>
-                    <a href="https://flowbite.com" class="flex ms-2 md:me-24">
+                    <a href="./src/index.php" class="flex ms-2 md:me-24">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/KPU_Logo.svg"
                             class="h-8 me-3" alt="FlowBite Logo" />
                         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Pusat Mengabarkan</span>
@@ -45,7 +45,7 @@
                             <ul class="py-1" role="none">
                                
                                 <li>
-                                <form action="proses-voter.php" method="GET">
+                                <form action="proses-kpu.php" method="GET">
                                 <input type="hidden" name="aksi" value="logout" />   
                                 <button type="submit" class="ml-2 mt-2 block px-4 py-2 focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Keluar Akun</button>
                                 </form>    
@@ -65,7 +65,7 @@
         <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
             <ul class="space-y-2 font-medium">
                 <li>
-                    <a href="dashboard-voter.php"
+                    <a href="dashboard-kpu.php"
                         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                             aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
@@ -79,7 +79,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="lihat-paslon.php"
+                    <a href="lihat-voter.php"
                         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                             aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
@@ -93,7 +93,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="bilik-suara.php"
+                    <a href="lihat-jadwal.php"
                         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                             aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
@@ -108,7 +108,7 @@
                 </li>
 
                 <li>
-                    <a href="bilik-suara.php"
+                    <a href="hasil-pemilu.php"
                         class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                         <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
                             aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"

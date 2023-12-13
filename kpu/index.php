@@ -56,7 +56,7 @@ require "client-kpu.php";
                         Login Admin KPU
                     </h1>
 
-                    <form class="space-y-4 md:space-y-6" action="proses-voter.php" method="POST">
+                    <form class="space-y-4 md:space-y-6" action="proses-kpu.php" method="POST">
                         <input type="hidden" name="aksi" value="login" />
                         <div>
                             <label for="nik" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Masukkan Email</label>

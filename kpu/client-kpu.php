@@ -20,7 +20,7 @@ class Client
     {
     
         $data = '{
-            "nik":"' . $data['nik'] . '",
+            "email":"' . $data['email'] . '",
             
       
             "password":"' . $data['password'] . '",
@@ -37,6 +37,60 @@ class Client
         $data2 = json_decode($response);
         return $data2;
         unset($data, $data2, $c, $response);
+    }
+    public function tampil_semua_data_kades($data)
+    {
+        $domisili = $this->filter($data['aksi']);
+        
+        $client = curl_init($this->url . '?aksi=' . $data['aksi'] . '&jwt=' . $data['jwt']);
+        curl_setopt($client, CURLOPT_RETURNTRANSFER, 1);
+        $response = curl_exec($client);
+        curl_close($client);
+        $data = json_decode($response);
+        return $data;
+        unset($nik, $client, $response, $data);
+       
+    }
+
+    public function tampil_semua_data_voter($data)
+    {
+        $domisili = $this->filter($data['aksi']);
+        
+        $client = curl_init($this->url . '?aksi=' . $data['aksi'] . '&jwt=' . $data['jwt']);
+        curl_setopt($client, CURLOPT_RETURNTRANSFER, 1);
+        $response = curl_exec($client);
+        curl_close($client);
+        $data = json_decode($response);
+        return $data;
+        unset($nik, $client, $response, $data);
+       
+    }
+    public function tampil_semua_jadwal($data)
+    {
+        $domisili = $this->filter($data['aksi']);
+        
+        $client = curl_init($this->url . '?aksi=' . $data['aksi'] . '&jwt=' . $data['jwt']);
+        curl_setopt($client, CURLOPT_RETURNTRANSFER, 1);
+        $response = curl_exec($client);
+        curl_close($client);
+        $data = json_decode($response);
+        return $data;
+        unset($nik, $client, $response, $data);
+       
+    }
+
+    public function hasil_pilkades($data)
+    {
+        $domisili = $this->filter($data['aksi']);
+        
+        $client = curl_init($this->url . '?aksi=' . $data['aksi'] . '&jwt=' . $data['jwt']);
+        curl_setopt($client, CURLOPT_RETURNTRANSFER, 1);
+        $response = curl_exec($client);
+        curl_close($client);
+        $data = json_decode($response);
+        return $data;
+        unset($nik, $client, $response, $data);
+       
     }
 
     public function tampil_semua_data($nik)
