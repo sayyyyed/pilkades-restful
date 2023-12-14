@@ -2,18 +2,14 @@
 error_reporting(1);
 // include "client-voter.php";
 // include src/client-kades.php;
-include "client-kpu.php";
+include "client-kpu-login.php";
 
-if (!isset($_COOKIE['jwt'])) {
-    // Jika tidak ada cookie, redirect ke index.php atau halaman login
-    header('location: index.php'); // Sesuaikan dengan halaman login atau index
-    exit(); // Pastikan untuk keluar dari skrip setelah melakukan redirect
-} else {
+
     $data = array("jwt" => $_COOKIE['jwt'], "email" => $_COOKIE['email'], "name" => $_COOKIE['name'], "aksi" => "tampil-jadwal");
     // var_dump($data['id_voter']);
     // $r = $abc->tampil_data($data);
 
-}
+
 ?>
 
 <html lang="en">

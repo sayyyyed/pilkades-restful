@@ -3,32 +3,9 @@ error_reporting(1);
 include "client-kpu.php";
 
 
-if ($_POST['aksi'] == 'login') {
-    $data = array(
-        "email" => $_POST['email'],
-        "password" => $_POST['password'],
-        "aksi" => $_POST['aksi']
-    );
 
-    $data2 = $abc->login($data);
 
-    if ($data2 && isset($data2->jwt)) {
-        setcookie('jwt', $data2->jwt, time() + 3600);
-   
-        setcookie('email', $data2->name, time() + 3600);
-        //domisili
-        setcookie('name', $data2->domisili, time() + 3600);
-        // setcookie('id_voter', $data2->id_voter, time() + 3600);
-        
-        //print data2
-        // var_dump($data2->id_voter);
-        header('location:dashboard-kpu.php');
-    } else {
-        header('location:index.php');
-    }
-}
-
-elseif ($_POST['aksi'] == 'tambah') {
+if ($_POST['aksi'] == 'tambah') {
     
     $data = array(
         "nik" => $_POST['nik'],

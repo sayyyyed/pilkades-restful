@@ -39,59 +39,9 @@ function filter($data)
     return $data;
     unset($data);
 }
-if ($_SERVER['REQUEST_METHOD'] == 'POST' and isset($data->email) and isset($data->password)) {
-    $data2['email'] = $data->email;
-    $data2['password'] = $data->password;
-    $data2['id_kpu'] = $data->id_voter;
-    // $data2['domisili'] = $data->domisili;
 
 
-
-
-
-    $data3 = $abc->login_kpu($data2);
-
-    // cek login pengguna
-    if ($data3) {
-        // generate json web token (jwt)
-        $token = array(
-            "iat" => $issued_at,
-            "exp" => $expiration_time,
-            "iss" => $issuer,
-            "data" => array(
-                "email" => $data2['email'],
-                "password" => $data3['password'],
-                // "domisili" => $data3['domisili'],
-                "id_kpu" => $data3['id_kpu']
-
-
-            )
-        );
-        // set response code
-        http_response_code(200);
-        // generate jwt
-        $jwt = JWT::encode($token, $key);
-        echo json_encode(
-            array(
-                "message" => "Login sukses",
-                "email" => $data2['email'],
-                "password" => $data3['password'],
-                // "domisili" => $data3['domisili'],
-
-                "id_kpu" => $data3['id_kpu'],
-
-                "jwt" => $jwt
-            )
-        );
-    } else { // login gagal 
-        // set response code
-        http_response_code(401);
-        echo json_encode(array("message" => "Login gasgal"));
-    }
-}
-
-
-elseif ($_SERVER['REQUEST_METHOD'] == 'GET' and ($_GET['aksi']=='tampil-kades')) {
+if ($_SERVER['REQUEST_METHOD'] == 'GET' and ($_GET['aksi']=='tampil-kades')) {
     // $jwt = $_GET['jwt'];
 
     try {
@@ -189,11 +139,11 @@ elseif ($_SERVER['REQUEST_METHOD'] == 'GET' and ($_GET['aksi']=='hasil')) {
 
 //create get SUARA
 elseif ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    $jwt = $_GET['jwt'];
+    // $jwt = $_GET['jwt'];
 
     try {
         // decode jwt
-        $decoded = JWT::decode($jwt, $key, array('HS256'));
+        // $decoded = JWT::decode($jwt, $key, array('HS256'));
 
         if ($_GET['aksi'] == 'tampil' && isset($_GET['nik'])) {
             $nik = filter($_GET['nik']);
