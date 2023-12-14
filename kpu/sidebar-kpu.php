@@ -14,7 +14,7 @@
                             </path>
                         </svg>
                     </button>
-                    <a href="./src/index.php" class="flex ms-2 md:me-24">
+                    <a href="index.php" class="flex ms-2 md:me-24">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/KPU_Logo.svg"
                             class="h-8 me-3" alt="FlowBite Logo" />
                         <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Pusat Mengabarkan</span>
